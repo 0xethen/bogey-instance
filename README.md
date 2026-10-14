@@ -14,12 +14,12 @@ is changing one line. Forking Bogey is for changing Bogey's code, not for runnin
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Your name, theme and disabled plugins          | The published image and a mounted `bogey.config.ts`, no build: the [all-in-one compose](https://github.com/0xethen/bogey/blob/main/docs/self-hosting/all-in-one.md) |
 | Your own logo file, an extra theme or a plugin | This repository: those are part of the build                                                                                                                        |
-| To change Bogey's code                         | A fork of Bogey                                                                                                                                                     |
+| To change Bogey's code                         | [A fork of Bogey](https://github.com/0xethen/bogey)                                                                                                                 |
 
 ## Use it
 
-1. Click **Use this template** on [0xethen/bogey-template](https://github.com/0xethen/bogey-template)
-   (or `gh repo create my-bogey --template 0xethen/bogey-template --private --clone`). Edit
+1. Click **Use this template** on [0xethen/bogey-aio](https://github.com/0xethen/bogey-aio)
+   (or `gh repo create my-bogey --template 0xethen/bogey-aio --private --clone`). Edit
    `bogey.config.ts`: your name, logo, theme. Put your logo in `public/brand/`.
 2. Pick the release in `compose.yml` (`BOGEY_VERSION`, a tag like `v2.0.0`).
 3. Put your secrets in `.env` (`.env.example` lists them) and Supabase's settings in its own
