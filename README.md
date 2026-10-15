@@ -21,7 +21,7 @@ is changing one line. Forking Bogey is for changing Bogey's code, not for runnin
 1. Click **Use this template** on [0xethen/bogey-instance](https://github.com/0xethen/bogey-instance)
    (or `gh repo create my-bogey --template 0xethen/bogey-instance --private --clone`). Edit
    `bogey.config.ts`: your name, logo, theme. Put your logo in `public/brand/`.
-2. Pick the release in `compose.yml` (`BOGEY_VERSION`, a tag like `v2.0.0`).
+2. Pick the release in `compose.yml` (`BOGEY_VERSION`, a tag like `v2.1.0`).
 3. Put your secrets in `.env` (`.env.example` lists them) and Supabase's settings in its own
    `.env`: [Supabase Cloud](https://github.com/0xethen/bogey/blob/main/docs/self-hosting/supabase-cloud.md)
    or [your own](https://github.com/0xethen/bogey/blob/main/docs/self-hosting/supabase.md).
