@@ -20,7 +20,8 @@ is changing one line. Forking Bogey is for changing Bogey's code, not for runnin
 
 1. Click **Use this template** on [0xethen/bogey-instance](https://github.com/0xethen/bogey-instance)
    (or `gh repo create my-bogey --template 0xethen/bogey-instance --private --clone`). Edit
-   `bogey.config.ts`: your name, logo, theme. Put your logo in `public/brand/`.
+   `bogey.config.ts`: your name, logo, theme, and `appUrl` (your public address, so queued
+   email gets sent). Put your logo in `public/brand/`.
 2. Pick the release in `compose.yml` (`BOGEY_VERSION`, a tag like `v2.1.0`).
 3. Put your secrets in `.env` (`.env.example` lists them) and Supabase's settings in its own
    `.env`: [Supabase Cloud](https://github.com/0xethen/bogey/blob/main/docs/self-hosting/supabase-cloud.md)
@@ -39,11 +40,11 @@ is changing one line. Forking Bogey is for changing Bogey's code, not for runnin
 
 ## What a change needs
 
-| You changed                                                   | What it needs                                                                    |
-| ------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `bogey.config.ts` (name, theme, repository, disabled plugins) | `docker compose restart web`                                                     |
-| `public/` (logo files), a theme, `bogey.plugins.lock`         | `docker compose up -d --build`                                                   |
-| `BOGEY_VERSION`                                               | `docker compose up -d --build`, after `docker compose exec web bogey db migrate` |
+| You changed                                                                        | What it needs                                                                    |
+| ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `bogey.config.ts` (name, theme, `appUrl`, `network`, `security`, disabled plugins) | `docker compose restart web`                                                     |
+| `public/` (logo files), a theme, `bogey.plugins.lock`                              | `docker compose up -d --build`                                                   |
+| `BOGEY_VERSION`                                                                    | `docker compose up -d --build`, after `docker compose exec web bogey db migrate` |
 
 `bogey.config.ts` is mounted read-only into the container and read when the server starts. A logo given as
 a full `https://` address in `icons` needs no rebuild either.

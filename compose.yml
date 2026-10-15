@@ -6,8 +6,6 @@ services:
         BOGEY_VERSION: ${BOGEY_VERSION:-v2.1.0}
     image: my-bogey
     env_file: .env
-    environment:
-      BOGEY_TRUST_PROXY: "1"
     volumes:
       - ./bogey.config.ts:/app/bogey.config.ts:ro
     restart: unless-stopped
