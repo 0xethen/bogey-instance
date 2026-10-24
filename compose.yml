@@ -3,7 +3,7 @@ services:
     build:
       context: .
       args:
-        BOGEY_VERSION: ${BOGEY_VERSION:-v2.3.0}
+        BOGEY_VERSION: ${BOGEY_VERSION:-v2.4.0}
     image: my-bogey
     env_file: .env
     volumes:
