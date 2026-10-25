@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-ARG BOGEY_VERSION=v2.4.10
+ARG BOGEY_VERSION=v2.4.11
 
 FROM ghcr.io/voidzero-dev/vite-plus:1.0.0-rc.1 AS build
 ARG BOGEY_VERSION
